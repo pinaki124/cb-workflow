@@ -15,7 +15,7 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-          sleep 90
+          sleep 180
   test:
     steps:
       - name: Say hello
