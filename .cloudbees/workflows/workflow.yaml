@@ -15,7 +15,7 @@ jobs:
         shell: sh
         run: |
           echo "hello world"
-          sleep 180
+          sleep 120
   test:
     steps:
       - name: Say hello
@@ -23,7 +23,7 @@ jobs:
         shell: sh
         run: |
           echo "hello world - duplicate - test preprod-5"
-          sleep 120
+          sleep 90
   deploy:
     steps:
       - name: Say hello
