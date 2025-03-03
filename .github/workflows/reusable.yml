@@ -14,4 +14,5 @@ jobs:
         - name: access environment
           run: |
             echo "user defined job - ${{ vars.var_A}}"
-            echo "trying to access a secret: ${{ secrets.secret_A }}"
+            echo "trying to access a secret from the environment: ${{ secrets.secret_A }}"
+            echo "trying to access a local secret: ${{ secrets.secret_local }}"
