@@ -34,7 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          echo "testing access to a local secret: ${{ secrets.secrets_local }}"
+          echo "testing access to a local secret: ${{ secrets.secret_local }}"
 
   reusable:
     uses: ./.github/workflows/reusable.yml
