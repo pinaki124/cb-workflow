@@ -1,0 +1,16 @@
+name: reusable
+
+on:
+    workflow_call:
+      inputs:
+        env-dev: 
+          required: true
+          type: string
+jobs:
+    init:
+      runs-on: ubuntu-latest
+      environment: ${{ inputs.env-dev }}
+      steps:
+        - name: access environment
+          run: |
+            echo "user defined job - ${{ vars.var_A}}"    
