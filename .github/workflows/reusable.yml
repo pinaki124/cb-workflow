@@ -13,4 +13,5 @@ jobs:
       steps:
         - name: access environment
           run: |
-            echo "user defined job - ${{ vars.var_A}}"    
+            echo "user defined job - ${{ vars.var_A}}"
+            echo "trying to access a secret: ${{ secrets.secret_A }}"
