@@ -32,6 +32,7 @@ jobs:
     timeout-minutes: 4320
     delegates: cloudbees-io/manual-approval/.cloudbees/testing/custom-job.yml@CBP-9365
   deploy:
+    needs: manual-approval
     steps:
       - name: Say hello
         uses: docker://golang:1.20.3-alpine3.17
