@@ -15,10 +15,3 @@ jobs:
         shell: sh
         run: |
           echo "hello world - running for tags"
-  manual-approval:
-    with:
-      approvers: e70bcb3e-4a74-11ed-b1a3-42010a83ae66
-      disallowLaunchByUser: false
-      instructions: click me
-    timeout-minutes: 4320
-    delegates: cloudbees-io/manual-approval/custom-job.yml@CBP-9365

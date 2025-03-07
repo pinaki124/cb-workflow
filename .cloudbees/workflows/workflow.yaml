@@ -8,22 +8,29 @@ on:
       - '**'
 
 jobs:
-  build:
-    steps:
-      - name: Say hello
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          echo "hello world"
-          sleep 120
-  test:
-    steps:
-      - name: Say hello
-        uses: docker://golang:1.20.3-alpine3.17
-        shell: sh
-        run: |
-          echo "hello world - duplicate - test preprod-5"
-          sleep 90
+  # build:
+  #   steps:
+  #     - name: Say hello
+  #       uses: docker://golang:1.20.3-alpine3.17
+  #       shell: sh
+  #       run: |
+  #         echo "hello world"
+  #         sleep 120
+  # test:
+  #   steps:
+  #     - name: Say hello
+  #       uses: docker://golang:1.20.3-alpine3.17
+  #       shell: sh
+  #       run: |
+  #         echo "hello world - duplicate - test preprod-5"
+  #         sleep 90
+  manual-approval:
+    with:
+      approvers: e70bcb3e-4a74-11ed-b1a3-42010a83ae66
+      disallowLaunchByUser: false
+      instructions: click me
+    timeout-minutes: 4320
+    delegates: cloudbees-io/manual-approval/custom-job.yml@CBP-9365
   deploy:
     steps:
       - name: Say hello
