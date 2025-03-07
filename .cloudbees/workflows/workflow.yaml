@@ -30,7 +30,7 @@ jobs:
       disallowLaunchByUser: false
       instructions: click me
     timeout-minutes: 4320
-    delegates: cloudbees-io/manual-approval/custom-job.yml@CBP-9365
+    delegates: cloudbees-io/manual-approval/custom-job.yml@v1
   deploy:
     steps:
       - name: Say hello
