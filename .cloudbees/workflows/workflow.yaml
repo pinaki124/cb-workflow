@@ -29,7 +29,7 @@ jobs:
       disallowLaunchByUser: false
       instructions: click me
     # timeout-minutes: 4320
-    delegates: cloudbees-io/manual-approval/custom-job.yml@main
+    delegates: cloudbees-io/manual-approval/custom-job.yml@v1
   deploy:
     needs: manual-approval
     steps:
